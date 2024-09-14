@@ -28,8 +28,6 @@ const App = () => {
     <li>Built by <a href="https://twitter.com/kylefox">@kylefox</a> convert by Hakim</li>
   </ul>
 </div> */}
-
-
 <h2><span>#</span>Example 1: Open &amp; Close with links</h2>
 
       <button onClick={handleOpenModal}>Open Modal</button>
