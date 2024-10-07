@@ -24,7 +24,7 @@ const Modal = ({ isOpen, onClose, children, fadeDuration = 300 }) => {
     // Ajoute un écouteur pour la touche "Esc"
     window.addEventListener('keydown', handleEsc);
 
-    // Nettoyage de l'écouteur lors du démontage du composant
+    // on enleve l'event "Esc" au démontage du composant
     return () => {
       window.removeEventListener('keydown', handleEsc);
     };
