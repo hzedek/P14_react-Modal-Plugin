@@ -13,22 +13,7 @@ const Modal = ({ isOpen, onClose, children, fadeDuration = 300 }) => {
     }
   }, [isOpen, fadeDuration]);
 
-  useEffect(() => {
-    const handleEsc = (event) => {
-      event.preventDefault()
-      if (event.key === 'Escape') {
-        onClose();
-      }
-    };
 
-    // Ajoute un écouteur pour la touche "Esc"
-    window.addEventListener('keydown', handleEsc);
-
-    // on enleve l'event "Esc" au démontage du composant
-    return () => {
-      window.removeEventListener('keydown', handleEsc);
-    };
-  }, [onClose]);
 
   if (!show) return null;
 

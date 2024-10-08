@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './dist/Modal.js', 
+  entry: './src/Modal.jsx', 
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'Modal.js', 
@@ -9,7 +9,7 @@ module.exports = {
     libraryTarget: 'umd'
   },  
   resolve: {
-    extensions: ['.js', '.jsx'] 
+    extensions: ['.js', '.jsx','.css'] 
   },
   module: {
     rules: [
@@ -19,6 +19,10 @@ module.exports = {
         use: {
           loader: 'babel-loader' 
         }
+      },
+      {
+        test: /\.css?$/,
+        use:  ["style-loader","css-loader"]
       }
     ]
   },
